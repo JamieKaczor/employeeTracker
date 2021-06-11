@@ -1,7 +1,7 @@
 const { prompt } = require("inquirer");
 const logo = require("asciiart-logo");
 const db = require("./db");
-const { updateEmployeeManager } = require("./db");
+const { updateEmployeeManager } = require("./db");  // not in joe code
 require("console.table");
 
 init();
@@ -75,10 +75,10 @@ async function loadMainPrompts() {
           value: "ADD_DEPARTMENT"
         },
         //  Bonus
-        // {
-        //   name: "Remove Department",
-        //   value: "REMOVE_DEPARTMENT"
-        // },
+        {
+          name: "Remove Department",
+          value: "REMOVE_DEPARTMENT"
+        },
         {
           name: "Quit",
           value: "QUIT"
@@ -107,6 +107,8 @@ async function loadMainPrompts() {
       return viewDepartments();
     case "ADD_DEPARTMENT":
       return addDepartment();
+    case "REMOVE_DEPARTMENT":
+      return removeDepartment();
     case "VIEW_ROLES":
       return viewRoles();
     case "ADD_ROLE":
@@ -137,6 +139,7 @@ async function viewEmployeesByDepartment() {
     // THE PROPERTY value SHOULD CONTAIN id.
     // THIS OBJECT FOR EACH MANAGER WILL RETURN TO MAP() TO CONSTRUCT AN ARRAY TO BE RETURNED AND BE STORED TO managerChoices.
     // YOUR CODE HERE
+    
   }));
 
   const { departmentId } = await prompt([
