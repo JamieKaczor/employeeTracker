@@ -1,7 +1,7 @@
 const { prompt } = require("inquirer");
 const logo = require("asciiart-logo");
 const db = require("./db");
-const { updateEmployeeManager } = require("./db");  // not in joe code
+const { updateEmployeeManager } = require("./db");  
 require("console.table");
 
 init();
@@ -135,10 +135,6 @@ async function viewEmployeesByDepartment() {
   const departmentChoices = departments.map(({ id, name }) => ({
     name: name,
     value: id
-    // CREATE TWO PROPERTIES name AMD value FOR THIS OBJECT. THE PROPERTY name SHOULD CONTAIN THE NAME OF THE DEPARTMENT.
-    // THE PROPERTY value SHOULD CONTAIN id.
-    // THIS OBJECT FOR EACH MANAGER WILL RETURN TO MAP() TO CONSTRUCT AN ARRAY TO BE RETURNED AND BE STORED TO managerChoices.
-    // YOUR CODE HERE
     
   }));
 
@@ -165,10 +161,6 @@ async function updateEmployeeRole() {
   const employeeChoices = employees.map(({ id, first_name, last_name }) => ({
     name: first_name + last_name,
     value: id
-    // CREATE TWO PROPERTIES name AMD value FOR THIS OBJECT. THE PROPERTY name SHOULD CONTAIN THE CONCATENATION OF THE FIRST HAME AND THE LAST NAME.
-    // THE PROPERTY value SHOULD CONTAIN id.
-    // THIS OBJECT FOR EACH MANAGER WILL RETURN TO MAP() TO CONSTRUCT AN ARRAY TO BE RETURNED AND BE STORED TO managerChoices.
-    // YOUR CODE HERE    
 
   }));
 
@@ -301,12 +293,8 @@ async function addEmployee() {
   const managerChoices = employees.map(({ id, first_name, last_name }) => ({
     name: first_name + last_name,
     value: id
-    // CREATE TWO PROPERTIES name AMD value FOR THIS OBJECT. THE PROPERTY name SHOULD CONTAIN THE CONCATENATION OF THE FIRST HAME AND THE LAST NAME.
-    // THE PROPERTY value SHOULD CONTAIN id.
-    // THIS OBJECT FOR EACH MANAGER WILL RETURN TO MAP() TO CONSTRUCT AN ARRAY TO BE RETURNED AND BE STORED TO managerChoices.
-    // YOUR CODE HERE    
-
   }));
+
   managerChoices.unshift({ name: "None", value: null });
 
   const { managerId } = await prompt({
