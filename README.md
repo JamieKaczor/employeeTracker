@@ -7,6 +7,9 @@ Developers are often tasked with creating interfaces that make it easy for non-d
 npm i
 
 ## Screenshot/Link to demo
+![screenshot](./images/screenshot.png)
+
+[Demo](https://drive.google.com/file/d/1ocp25VucYiX8Wzrr3QLeXRjU0CjjmHnH/view)
 
 ## Questions
 If you have any questions, please refer to my Github page, [JamieKaczor](https://github.com/JamieKaczor), or contact me through my email, Dignanjk@aol.com
